@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria Premium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #020617, #020617);
+  color: white;
+}
+
+/* TOPO */
+header {
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+header p {
+  color: #cbd5f5;
+  font-size: 1.05rem;
+}
+
+/* GRID */
+.galeria {
+  max-width: 1300px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 22px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 20px 45px rgba(0,0,0,.75);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.12);
+}
+
+/* SOBREPOSIÇÃO */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(2,6,23,.8), rgba(2,6,23,.2), transparent);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* TEXTO */
+.legenda {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: .85rem;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.card:hover .legenda {
+  opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Galeria</h1>
+  <p>Experiências aéreas exclusivas sobre os Lençóis Maranhenses</p>
+</header>
+
+<section class="galeria">
+
+  <!-- Substitua as imagens depois -->
+  <div class="card"><img src="foto1.jpg.jpg"><div class="overlay"></div><div class="legenda">Sobrevoo Exclusivo</div></div>
+  <div class="card"><img src="foto2.jpg.jpg"><div class="overlay"></div><div class="legenda">Paulino Neves ao Pôr do Sol</div></div>
+  <div class="card"><img src="foto3.jpg.JPG"><div class="overlay"></div><div class="legenda">Lagoas Naturais</div></div>
+  <div class="card"><img src="foto4.jpg.JPG"><div class="overlay"></div><div class="legenda">Vistas Panorâmicas</div></div>
+  <div class="card"><img src="foto5.jpg.JPG"><div class="overlay"></div><div class="legenda">Litoral ensolarado</div></div>
+  <div class="card"><img src="foto6.jpg.JPG"><div class="overlay"></div><div class="legenda">Dunas ao entardecer</div></div>
+
+</section>
+
+</body>
+</html>
+
