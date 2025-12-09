@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservas</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+          c:\Drone\DJI_0560.JPG
+            .form-container {
+                max-width: 600px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #f0f0f0;
+                border-radius: 10px;
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin-top: 15px;
+            }
+
+            select, input {
+                width: 100%;
+                padding: 10px;
+                margin-top: 8px;
+                border-radius: 8px;
+                border: 1px solid #aaa;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            button {
+                margin-top: 25px;
+                width: 100%;
+                padding: 15px;
+                background: #00aaff;
+                border: none;
+                color: white;
+                font-size: 18px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: #0088cc;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="form-container">
+            <h2 style="
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.05em;
+">
+  Faça sua Reserva
+</h2>
+
+
+
+            <form id="reservaForm" action="..." method="post"
+            onsubmit="enviarReserva(event)"
+      style="
+        max-width: 600px;
+        margin: 2rem auto 4rem;
+        padding: 2rem 1.8rem;
+        background: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+      ">
+
+                <!-- NOME -->
+                 <label>Digite seu nome:</label>
+                 <input type="text" placeholder="Seu nome" required>
+
+                 <!-- NÚMERO DE WHATSAPP -->
+                  <label>WhatsApp <span style="color:red">*</span></label>
+<input type="tel" id="whatsapp" placeholder="(99) 99999-9999"
+       maxlength="15" required oninput="formatarTelefone(this)">
+
+
+
+                <!-- DATA -->
+                 <label>Escolha o dia:</label>
+                 <input type="date" id="data" required>
+                 <p id="erro" style="color:red"></p>
+                 <script>
+const input = document.getElementById("data");
+const erro = document.getElementById("erro");
+
+input.addEventListener("change", function () {
+    const dataEscolhida = new Date(this.value);
+    const mes = dataEscolhida.getMonth() + 1; // janeiro = 1
+
+    // Permite somente meses ímpares (1, 3, 5, 7, 9, 11)
+    if (mes % 2 === 0) {
+        erro.innerHTML = "Este mês não é permitido. Escolha outro!";
+        this.value = ""; 
+    } else {
+        erro.innerHTML = "";
+    }
+});
+</script>
+
+
+                 <!-- HORÁRIO -->
+                  <label>Escolha o horário:</label>
+                  <select id="horario" required onchange="mostrarOutroHorario()">
+                    <option value="horário">Selecione</option>
+                    <option>06h-08h</option>
+                    <option>08h-10h</option>
+                    <option>10h-12h</option>
+                    <option>13h-15h</option>
+                    <option>15h-17h</option>
+                    <option value="outro">Outro</option>
+                  </select>
+
+                  <!-- CAMPO OCULTO PARA OUTRO HORÁRIO -->
+                   <input type="text"  id="outroHorario" placeholder="Digite o horário desejado"
+       style="display:none; margin-top:5px;">
+
+
+                   <!-- LOCAL -->
+                    <label>Local:</label>
+                    <select id="local" required onchange="mostrarOutroLocal()">
+                        <option value="">Selecione</option>
+                        <option>Atins</option>
+                        <option>Caburé</option>
+                        <option>Barro Vermelho</option>
+                        <option>Mandacarú</option>
+                        <option>Lençóis Maranhenses</option>
+                        <option>Paulino Neves</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <input type="text" id="outroLocal" placeholder="Digite o local"
+       style="display:none; margin-top:5px;">
+
+
+                    <!-- FOTO OU VÍDEO -->
+                     <label>Serviço desejado</label>
+                     <select id="servico" required>
+                        <option value="">Selecione</option>
+                        <option value="foto">Fotos</option>
+                        <option value="video">Vídeos</option>
+                        <option value="ambos">Fotos + Vídeos</option>
+                        <option value="combo">Combo (Foto + Vídeo)⭐</option>
+                     </select>
+
+                     <!-- OPÇÕES FOTO -->
+                      <div id="fotoOptions" class="hidden">
+                        <label>Quantidade de fotos:</label>
+                        <select>
+                            <option>Pacote básico (até 10 fotos) </option>
+                            <option>Pacote essencial (15 fotos) </option>
+                            <option>Pacote Premium (30 fotos) </option>
+                            <option>Pacote Luxo (50 fotos) </option>
+                        </select>
+                      </div>
+
+                      <!-- OPÇÕES VÍDEO -->
+                       <div id="videoOptions" class="hidden">
+                        <label>Duração dos vídeos:</label>
+                        <select>
+                            <option>Pacote básico - 2 vídeos de até 1 minuto cada</option>
+                            <option>Pacote essencial - 3 vídeos de até 2 minutos cada </option>
+                            <option>Pacote premium - 6 vídeos de até 3 minutos cada </option>
+                            <option>Pacote Luxo - A partir de 8 vídeo de 5 minutos cada</option>
+                        </select>
+                       </div>
+
+                       <!-- OPÇÕES COMBO -->
+<div id="comboOptions" class="hidden">
+  <label>Combo Foto + Vídeo:</label>
+  <select>
+    <option>Combo Premium — 30 fotos + 3 vídeos (até 2 minutos cada)</option>
+  </select>
+</div>
+
+
+                       <button type="submit">Fazer reserva</button>
+            </form>
+        </div>
+        
+        <script>
+            function enviarReserva() {
+                // Aqui você coloca o link de pagamento do Mercado Pago
+                let linkPagamento = "https://link-do-seu-pagamento";
+                alert("Sua reserva foi enviada! Agora finalize o pagamento para confirmar.");
+                window.locatio.href = linkPagamento;
+            }
+            const localSelect = document.getElementById("local");
+            const outroLocal = document.getElementById("outroLocalContainer");
+            const servico = document.getElementById("servico");
+            const fotoOptions = document.getElementById("fotoOptions");
+            const videoOptions = document.getElementById("videoOptions");
+
+            localSelect.addEventListener("change", () => {
+                outroLocal.classList.toggle("hidden", localSelect.value !== "outro");
+            });
+
+            servico.addEventListener("change", () => {
+
+                fotoOptions.classList.add("hidden");
+                videoOptions.classList.add("hidden");
+                if (servico.value === "foto") {
+                    fotoOptions.classList.remove("hidden");
+                }
+                if (servico.value  === "video") {
+
+                    videoOptions.classList.remove("hidden");
+                }
+                if (servico.value === "ambos") {
+                    fotoOptions.classList.remove("hidden");
+                    videoOptions.classList.remove("hidden");
+                }
+            })
+        </script>
+
+<script>
+function mostrarOutroHorario() {
+  const select = document.getElementById("horario");
+  const campo = document.getElementById("outroHorario");
+
+  if (select.value === "outro") {
+    campo.style.display = "block";
+    campo.required = true;
+  } else {
+    campo.style.display = "none";
+    campo.required = false;
+    campo.value = "";
+  }
+}
+
+function mostrarOutroLocal() {
+  const select = document.getElementById("local");
+  const campo = document.getElementById("outroLocal");
+
+  if (select.value === "outro") {
+    campo.style.display = "block";
+    campo.required = true;
+  } else {
+    campo.style.display = "none";
+    campo.required = false;
+    campo.value = "";
+  }
+}
+
+function formatarTelefone(campo) {
+  let valor = campo.value.replace(/\D/g, ""); // tira tudo que não for número
+
+  if (valor.length > 11) {
+    valor = valor.substring(0, 11);
+  }
+
+  if (valor.length > 6) {
+    campo.value = `(${valor.substring(0,2)}) ${valor.substring(2,7)}-${valor.substring(7,11)}`;
+  } else if (valor.length > 2) {
+    campo.value = `(${valor.substring(0,2)}) ${valor.substring(2)}`;
+  } else if (valor.length > 0) {
+    campo.value = `(${valor}`;
+  }
+}
+
+
+</script>
+
+</body>
+
+    </body>
+</html>
