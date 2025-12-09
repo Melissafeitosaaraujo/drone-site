@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, 
+        initial-scale=1.0">
+        <title>Serviço de Drone</title>
+        <link rel="stylesheet" href="styles.css">
+        <href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+<!-- MENU -->
+ <header>
+    <h1 class="logo">Drone</h1>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="#servicos">Serviços</a>
+        <a href="reservas.html">Reserva</a>
+        <a href="https://wa.me/5511966097728" title="whatsapp: (11) 96609-7728" target="_blank">Contato</a>
+    </nav>
+ </header>
+
+ <!-- SEÇÃO PRINCIPAL -->
+  <section class="hero">
+    <!-- VÍDEO DE FUNDO -->
+     <video class="hero-video" autoplay muted loop playsinline>
+      <source src="ondas-mar.mp4.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+     </video>
+     
+    <img src="drone.png.png" id="drone">
+<canvas id="trilha"></canvas>
+
+    <h2>Registre momentos inesquecíveis em cenários únicos - do alto</h2>
+    <p>Agende seu voo e tenha essa experiência registrada com exclusividade.</p>
+    <button class="btn">Fazer reserva</button>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+  </section>
+  <section id="Início"></section>
+  <class="destaque">
+
+    <!-- Slogan / Introdução -->
+     <!-- EXPERIÊNCIA FUTURISTA + TURISMO -->
+<section class="aero-experience">
+  <div class="aero-glass">
+
+    <span class="aero-chip">DRONE EXPERIENCE</span>
+
+    <h2>Seu momento merece um novo ângulo.</h2>
+
+    <p class="aero-text">
+      Imagens profissionais, estabilidade perfeita e tecnologia inteligente para registrar experiências inesquecíveis.
+    </p>
+
+    <div class="aero-line"></div>
+
+    <div class="aero-stats">
+      <div><strong>4K HDR</strong><span>Captura avançada</span></div>
+      <div><strong>GPS Pro</strong><span>Rotas inteligentes</span></div>
+      <div><strong>Estável</strong><span>Suavidade aérea</span></div>
+      <div><strong>Exclusivo</strong><span>Experiência premium</span></div>
+    </div>
+
+  </div>
+
+  <div class="aero-wave"></div>
+</section>
+
+      <!-- Fecha a seção PRINCIPAL -->
+    
+<!-- Seção de Vantagens -->
+     <section id="vantagens" style="padding: 40px 20px; background: #fff; font-family: Arial, sans-serif;">
+      <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 2.5rem;
+        margin-bottom: 40px; color: #222;">Por que escolher nosso Drone?</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+
+          <!-- Vantagem 1 -->
+           <div style="flex: 1 1 300px;
+           background: #fdfdfd; padding: 30px;
+           border-radius: 15px; box-shadow: 08px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; text-align: center;">
+           <img src="drone1.jpg.JPG" alt="Filmagem em 4K" style="width: 100%; border-radius: 10px; margin-bottom: 20px;"> 
+          <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0077b6;">Filmagem em 4K</h3>
+        <p style="color: #555;">Capture vídeos e fotos com resolução ultra nítida, perfeita para eventos e projetos profissionais.</p> 
+      </div>
+
+      <!-- Vantagens 2 -->
+       <div style="flex: 1 1 300px;
+       background: #fdfdfd; padding: 30px;
+       border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; text-align: center;">
+       <img src="drone2.jpg.JPG" alt="Imagens aéreas únicas" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0077b6;">Imagens Aéreas Únicas</h3>
+    <p style="color: #555;">Obtenha perspectivas incríveis de cima, mostrando detalhes que ninguém mais vê.</p>
+  </div>
+  <!-- Vantagem 3 -->
+   <div style="flex: 1 1 300px; background: #fdfdfd; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; text-align: center;">
+    <img src="drone3.jpg.JPG" alt="Entrega rápida" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0077b6;">Entrega rápida</h3>
+    <p style="color: #555;">Receba suas fotos e vídeos em tempo recorde, prontos para compartilhar ou publicar.</p>
+   </div>
+
+        </div>
+      </div>
+     </section>
+
+     <!-- Efeito hover nas vantagens -->
+<!-- Animação ao passar o mouse -->
+<style>
+  #vantagens div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  }
+</style>
+
+
+<div class="galeria">
+  <h2>Momentos incríveis do alto</h2>
+
+  <div class="video-container">
+    <video width="900" height="506" controls>
+      <source src="video1.MP4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+
+    <section class="servicos" id="servicos">
+  <h2>Nossos Serviços</h2>
+  <div class="servicos-grid">
+
+    <div class="servico-card">
+      <h3>Filmagem Aérea</h3>
+      <p>Vídeos em alta resolução, capturando cenas aéreas únicas com drone 4K.</p>
+    </div>
+
+    <div class="servico-card">
+      <h3>Fotografia Aérea</h3>
+      <p>Fotos profissionais aéreas — perfeitas para imóveis, eventos ou os melhores ângulos da natureza.</p>
+    </div>
+
+    <div class="servico-card">
+      <h3>Tour Cinematográfico</h3>
+      <p>Sequências filmadas com drone + edição que destacam movimento e emoção — ideal para vídeos promocionais, lançamentos e vídeos memoráveis.</p>
+    </div>
+
+    <div class="servico-card">
+      <h3>Acompanhamento de Eventos</h3>
+      <p>Captação aérea de cerimônias, festas, casamentos ou eventos — do início ao fim, com imagens aéreas e cobertura completa.</p>
+    </div>
+
+  </div>
+
+  <h2>Pacotes & Preços</h2>
+  <div class="precos">
+
+    <div class="pacote">
+      <h4>Fotos — Básico</h4>
+      <p>Até 10 fotos aéreas editadas</p>
+      <p><strong>R$ 300</strong></p>
+    </div>
+
+    <div class="pacote">
+      <h4>Fotos — Essencial</h4>
+      <p>Até 15 fotos aéreas editadas</p>
+      <p><strong>R$ 450</strong></p>
+    </div>
+
+    <div class="pacote">
+      <h4>Fotos — Premium</h4>
+      <p>Até 30 fotos aéreas editadas</p>
+      <p><strong>R$ 800</strong></p>
+    </div>
+
+    <div class="pacote">
+      <h4>Fotos — Luxo</h4>
+      <p>Até 50 fotos aéreas editadas</p>
+      <p><strong>R$ 1.200</strong></p>
+    </div>
+
+    <div class="pacote">
+      <h4>Vídeos — Básico</h4>
+      <p>2 vídeos de até 1 min cada</p>
+      <p><strong>R$ 350</strong></p>
+    </div>
+
+    <div class="pacote">
+      <h4>Vídeos — Essencial</h4>
+      <p>3 vídeos de até 2 min cada</p>
+      <p><strong>R$ 600</strong></p>
+    </div>
+
+    <div class="pacote">
+      <h4>Vídeos — Premium</h4>
+      <p>6 vídeos de até 3 min cada</p>
+      <p><strong>R$ 1.200</strong></p>
+    </div>
+
+    <div class="pacote">
+      <h4>Vídeos — Luxo</h4>
+      <p>8 vídeos + 5 min cada (ou mais)</p>
+      <p><strong>R$ 1.800</strong></p>
+    </div>
+
+    <div class="pacote destaque">
+      <h4>Combo Foto + Vídeo</h4>
+      <p>30 fotos + 3 vídeos (até 2 min cada)</p>
+      <p><strong>R$ 1.400</strong></p>
+    </div>
+
+<section class="cta-final">
+    <div class="cta-final-content">
+        <h2>VOCÊ ESTÁ PRONTO(A) PARA VIVER ESSA EXPERIÊNCIA?</h2>
+        <p>A agenda está quase lotada e as reservas estão sendo feitas a todo momento. Se você quer garantir a sua vaga, não deixe para depois. 🔥 </p>
+        <a href="reservas.html" class="btn-reservar-final">Fazer Reserva</a>
+    </div>
+
+</section>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS PREMIUM -->
+<section class="depoimentos" id="depoimentos">
+  <div class="depoimentos-header">
+    <h2>O que nossos clientes falam</h2>
+    <p>Relatos reais de quem já viveu essa experiência única.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <p class="texto">
+        "Cara, que isso?! Ficou perfeito demais! Você é diferenciado, não tem nem comparação. Valeu de verdade, tmj 👊"
+      </p>
+      <div class="cliente">
+        <strong>João Silva</strong>
+        <span>Ensaio ao pôr do sol</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="texto">
+        "Uhull ficou melhor do que eu imaginava."
+      </p>
+      <div class="cliente">
+        <strong>Louise Gomes</strong>
+        <span>Clipe de momentos especiais</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="texto">
+        "Você conseguiu pegar exatamente o que eu queria sem eu nem explicar direito. Obrigada pelo capricho, estou apaixonada rsrs."
+      </p>
+      <div class="cliente">
+        <strong>Daniela Soares</strong>
+        <span>Ensaio intimista</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="texto">
+        "Elionilson, cara... eu  preciso te falar, ficou MUITO top😂👏. A Clara tá até emocionada aqui, disse que vai guardar esse vídeo pra vida toda. A gente viu as imagens e ficou tipo 'mano q perfeição'. Obrigadão mesmo, você mandou bem demais!"
+      </p>
+      <div class="cliente">
+        <strong>José Alves</strong>
+        <span>Filmagem de casamento</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Seção de Chamada para Reserva -->
+<section class="booking-hero">
+  <div class="booking-container">
+    
+    <div class="booking-content">
+      <h1 class="booking-title">
+        A aventura começa com um clique.
+      </h1>
+      <p class="booking-subtitle">
+        Reserve seu registro aéreo em segundos e fale diretamente com nossa equipe pelo WhatsApp. Agenda limitada e horários muito concorridos.
+      </p>
+
+      <div class="booking-actions">
+        <a href="reservas.html" class="btn-reserve">
+          Reserve agora
+        </a>
+
+        <a href="https://wa.me/5511966097728" target="_blank" class="whatsapp-link" aria-label="Fale conosco no WhatsApp">
+          <span class="whatsapp-icon">
+            <!-- Ícone WhatsApp em SVG -->
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M16 3C9.373 3 4 8.373 4 15c0 2.557.777 4.93 2.113 6.914L4 29l7.273-2.077C12.884 27.608 14.399 28 16 28c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.431 0-2.833-.385-4.06-1.115l-.291-.172-4.313 1.232 1.232-4.205-.189-.307A8.53 8.53 0 0 1 7.5 15c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5-3.806 8.5-8.5 8.5zm4.313-6.293c-.237-.119-1.406-.692-1.625-.77-.218-.079-.377-.118-.537.118-.158.237-.615.77-.754.929-.139.158-.278.178-.515.059-.237-.119-1-.369-1.903-1.176-.703-.625-1.178-1.397-1.317-1.634-.139-.237-.015-.365.104-.484.107-.107.237-.278.356-.417.119-.139.158-.237.237-.396.079-.158.04-.297-.02-.416-.059-.119-.537-1.292-.737-1.769-.194-.467-.392-.404-.537-.412l-.458-.008c-.158 0-.416.059-.635.297-.218.237-.83.81-.83 1.974 0 1.164.851 2.288.97 2.446.119.158 1.675 2.56 4.053 3.588.566.245 1.007.392 1.352.502.568.181 1.085.156 1.494.095.455-.068 1.406-.575 1.605-1.131.198-.556.198-1.032.139-1.131-.059-.099-.217-.158-.455-.277z"/>
+            </svg>
+          </span>
+          <span class="whatsapp-text">Tirar dúvidas no WhatsApp</span>
+        </a>
+      </div>
+
+      <p class="booking-note">
+        Alta demanda, poucas datas disponíveis. Se você quer garantir seu horário, esse é o momento.
+      </p>
+    </div>
+
+    <div class="booking-card">
+      <p class="booking-card-label">FAQ Rápido</p>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Como faço para reservar meu voo?</summary>
+          <p>Clique em “Reserve agora”, escolha a data desejada e preencha seus dados. Você receberá a confirmação pelo WhatsApp ou e-mail.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Preciso pagar antecipado?</summary>
+          <p>Sim. A reserva é confirmada mediante pagamento antecipado, garantindo seu horário e a disponibilidade do equipamento e operador.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quanto tempo dura a filmagem/fotos?</summary>
+          <p>A duração pode chegar a até 3 horas, incluindo pausas para troca de baterias e ajustes de cenário. O tempo  exato varia conforme o que será registrado, garantindo sempre a melhor qualidade.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>E se chover ou o tempo estiver ruim?</summary>
+          <p>Por segurança, remarcamos o voo sem custo adicional, de acordo com a disponibilidade da agenda.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quais são as formas de pagamento?</summary>
+          <p>Aceitamos Pix, cartão de crédito, e transferência bancária. No caso de pacotes maiores, há possibilidade de pagamento parcelado.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Posso escolher o estilo das filmagens?</summary>
+          <p>Sim. Você pode escolher entre um registro mais cinematográfico, focado em movimentos suaves e planos amplos, ou algo mais direto e objetivo. Também sugerimos os melhores ângulos conforme local, horário e finalidade.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Posso remarcar ou cancelar a reserva?</summary>
+          <p>Sim. Você pode remarcar ou cancelar sua reserva com antecedência.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Como sei se meu local é permitido para voar com drone?</summary>
+          <p>Ao solicitar seu agendamento, verificamos rapidamente se é autorizado ou seguro. Se não for, sugerimos alternativas próximas.</p>
+        </details>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
+
+
+
