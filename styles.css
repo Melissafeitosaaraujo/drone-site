@@ -1,4 +1,18 @@
 /* Estilo geral */
+/* Base responsiva geral */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -475,8 +489,65 @@ html {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVO */
+/* RESPONSIVO – AJUSTES GERAIS PARA CELULAR */
 @media (max-width: 768px) {
+
+  /* MENU empilhado no celular */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  header nav a {
+    margin-left: 0;
+    margin-right: 16px;
+    display: inline-block;
+  }
+
+  /* HERO mais confortável */
+  .hero {
+    padding: 70px 16px;
+    min-height: 70vh;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .btn {
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+
+  /* Título da galeria um pouco menor */
+  .galeria h2 {
+    font-size: 2rem;
+  }
+
+  /* GRIDS em uma coluna no celular */
+  .servicos-grid,
+  .precos,
+  .cards,
+  .vantagens-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .servico-card,
+  .pacote,
+  .card,
+  .vantagem-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* Deixar depoimentos mais suaves */
   .depoimentos-header h2 {
     font-size: 1.6rem;
   }
@@ -485,7 +556,39 @@ html {
     width: 100%;
     max-width: 360px;
   }
+
+  /* Bloco futurista de areia mais compacto */
+  .aero-glass {
+    padding: 40px 24px;
+    border-radius: 32px;
+  }
+
+  .vantagens {
+    padding: 70px 16px;
+  }
+
+  .vantagens-inner h2 {
+    font-size: 2.1rem;
+    margin-bottom: 40px;
+  }
+
+  /* Chamada de reserva (booking) */
+  .booking-hero {
+    padding: 3rem 1.2rem;
+  }
+
+  .booking-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .whatsapp-link,
+  .btn-reserve {
+    width: 100%;
+    justify-content: center;
+  }
 }
+
 
 /* Seção de reserva */
 .booking-hero {
